@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.css';
+import TaskList from '../src/components/TaskList';
+import TaskListContextProvider from '../src/components/context/TaskListContext';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     
-    </div>
+    <TaskListContextProvider>
+      <div className="container">
+        <div className="app-wrapper">
+          <div className="main">
+            <TaskList />
+          </div>
+        </div>
+      </div>
+    </TaskListContextProvider>
   );
 }
 
